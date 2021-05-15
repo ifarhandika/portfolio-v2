@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #151515;
+  color: white;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.long-card {
+  background-color: #202022;
+  padding: 30px;
+  margin: 10px 0;
+  transition: 0.2s;
+}
+
+.long-card small {
+  letter-spacing: 5px;
+}
+
+.long-card h4 {
+  margin: 15px 0 10px 0;
+}
+
+.long-card p {
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+.long-card:hover {
+  transform: scale(1.05);
+}
+
+.small-card {
+  background-color: #202022;
+  height: 250px;
+  padding: 30px;
+  margin: 10px 0;
+  transition: 0.2s;
+}
+
+.small-card small {
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.small-card h4 {
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.small-card p {
+  color: #808080;
+  font-size: 0.8rem;
+}
+
+.small-card:hover {
+  transform: scale(1.1);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+header #logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+header .main-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .main-nav a {
+  margin: 1rem;
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+
+header .main-nav a:hover {
+  color: #808080;
+}
+
+header .main-nav .resume {
+  background-color: #d1d1d1;
+  color: black;
+  padding: 5px 15px;
+  transition: 0.2s ease-out;
+}
+
+header .main-nav .resume:hover {
+  background-color: #808080;
+  color: white;
+}
+
+header .main-nav .contact-info {
+  display: none;
+}
+
+header .main-nav.active {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+header .nav-toggle {
+  position: absolute;
+  right: 40px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+header .nav-toggle .line {
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+header .toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .toggle .line2 {
+  opacity: 0;
+}
+
+header .toggle .line3 {
+  width: 100%;
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media (max-width: 768px) {
+  header #logo {
+    z-index: 1;
+  }
+  header .main-nav {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    background-color: black;
+  }
+  header .main-nav ul {
+    display: block;
+    position: absolute;
+    top: 7rem;
+    padding: 0 40px;
+  }
+  header .main-nav ul li {
+    margin: 10px 0;
+  }
+  header .main-nav ul a {
+    margin: 0;
+    font-size: 1.7rem;
+  }
+  header .main-nav .contact-info {
+    display: block;
+    position: absolute;
+    bottom: 10rem;
+    padding: 0 40px;
+  }
+  header .main-nav .contact-info ul {
+    display: flex;
+    padding: 0;
+  }
+  header .main-nav .contact-info li {
+    list-style: none;
+  }
+  header .main-nav .contact-info a {
+    margin: 0 1rem;
+  }
+  header .main-nav .contact-info a:first-child {
+    margin-left: 0;
+  }
+  .nav-toggle {
+    display: flex;
+    z-index: 1;
+  }
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #141414;
+}
+
+.intro-section .intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.intro-section .intro h1 {
+  letter-spacing: 2px;
+}
+
+.intro-section .intro h2 {
+  font-weight: 100;
+  margin-bottom: 1rem;
+  letter-spacing: 10px;
+  color: #808080;
+}
+
+.intro-section .intro .action {
+  font-size: 1.3rem;
+  margin-top: 2.5em;
+  border: 2px solid white;
+  padding: 10px 20px;
+  transition: 0.2s ease-in;
+}
+
+.intro-section .intro .action:hover {
+  background: #808080;
+  border: 2px solid #808080;
+  color: black;
+}
+
+.main-section .grid {
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.main-section .grid .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 !important;
+}
+
+.main-section .grid .about p {
+  color: #808080;
+  line-height: 2rem;
+}
+
+.main-section .grid .project .main-project {
+  margin: 50px 0;
+}
+
+.main-section .grid .project .main-project .main-project-title {
+  margin-bottom: 30px;
+}
+
+.main-section .grid .project .side-project .grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.main-section .grid .project .side-project .grid .right {
+  margin-top: 50px;
+}
+
+.main-section .grid .contact {
+  margin: 50px 0 20px 0;
+}
+
+.main-section .grid .contact h4 {
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.main-section .grid .contact a {
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.main-section .grid .contact a:hover {
+  color: #808080;
+}
+/*# sourceMappingURL=main.css.map */

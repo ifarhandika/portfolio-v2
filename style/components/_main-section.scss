@@ -1,0 +1,49 @@
+.main-section {
+    .grid {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 2rem;
+        .about {
+            @include flex();
+            height: 100vh;
+            margin: 0 !important;
+            p {
+                color: $lightgrey;
+                line-height: 2rem;
+            }
+        }
+
+        .project {
+            .main-project {
+                margin: 50px 0;
+                .main-project-title {
+                    margin-bottom: 30px;
+                }
+            }
+            .side-project {
+                .grid {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    .right {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+
+        .contact{
+            margin: 50px 0 20px 0;
+            h4{
+                font-weight: 100;
+                font-size: 0.9rem;
+            }
+            a{
+                font-weight: 800;
+                letter-spacing: 2px;
+                transition: 0.2s;
+                &:hover{
+                    color: $lightgrey;
+                }
+            }
+        }
+    }
+}

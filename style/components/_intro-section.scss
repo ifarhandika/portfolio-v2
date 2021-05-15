@@ -1,0 +1,33 @@
+.intro-section {
+    @include flex();
+    height: 90vh;
+    background-color: #141414;
+    .intro {
+        @include flex();
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 40px;
+        h1{
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-weight: 100;
+            margin-bottom: 1rem;
+            letter-spacing: 10px;
+            color: $lightgrey;
+        }
+        .action {
+            font-size: 1.3rem;
+            margin-top: 2.5em;
+            border: 2px solid white;
+            padding: 10px 20px;
+            transition: 0.2s ease-in;
+            &:hover {
+                background: $lightgrey;
+                border: 2px solid $lightgrey;
+                color: black;
+            }
+        }
+    }
+}
