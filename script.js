@@ -36,3 +36,13 @@ const tabNavigation = () => {
 }
 
 // tabNavigation()
+
+// const tl = gsap.timeline({ defaults: { ease: "power2.easeInOut" } })
+const pageAnimation = () => {
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } })
+
+    tl.fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 0.5, stagger: 0.20 })
+    tl.fromTo(".intro", { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 1 })
+
+}
+pageAnimation()
