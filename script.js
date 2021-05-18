@@ -10,14 +10,29 @@ const responsiveNavbar = () => {
 responsiveNavbar()
 
 const splitScroll = () => {
-    const controller = new ScrollMagic.Controller()
-
-    new ScrollMagic.Scene({
-        duration: '160%',
-        triggerElement: '.about',
-        triggerHook: 0
-    })
-    .setPin('.about')
-    .addTo(controller)
+    if (window.innerWidth > 1000) {
+        const controller = new ScrollMagic.Controller()
+        new ScrollMagic.Scene({
+            duration: "160%",
+            triggerElement: ".about",
+            triggerHook: 0,
+        })
+            .setPin(".about")
+            .addTo(controller)
+    }
 }
 splitScroll()
+
+const tabNavigation = () => {
+    const tabNav = document.querySelector(".tab-nav")
+    const tabs = document.querySelectorAll(".tab")
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            tabNav.querySelector(".active").classList.remove("active")
+            tab.classList.add("active")
+        })
+    })
+}
+
+// tabNavigation()

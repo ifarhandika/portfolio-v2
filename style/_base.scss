@@ -41,6 +41,7 @@ body {
     background-color: #202022;
     padding: 30px;
     margin: 10px 0;
+    width: 100%;
     transition: 0.2s;
     small {
         letter-spacing: 5px;
@@ -59,8 +60,9 @@ body {
 
 .small-card{
     background-color: #202022;
-    height: 250px;
     padding: 30px;
+    height: 250px;
+    width: 100%;
     margin: 10px 0;
     transition: 0.2s;
     small {
@@ -77,5 +79,11 @@ body {
     }
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+@media (max-width: 640px){
+    .small-card{
+        height: auto;
     }
 }

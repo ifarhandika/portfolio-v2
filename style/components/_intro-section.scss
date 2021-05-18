@@ -7,7 +7,6 @@
         width: 100%;
         flex-direction: column;
         text-align: center;
-        padding: 0 40px;
         h1{
             letter-spacing: 2px;
         }
@@ -28,6 +27,15 @@
                 border: 2px solid $lightgrey;
                 color: black;
             }
+        }
+    }
+}
+
+
+@media (max-width: 568px){
+    .intro-section{
+        .intro{
+            text-align: left;
         }
     }
 }

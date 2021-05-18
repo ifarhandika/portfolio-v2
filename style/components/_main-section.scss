@@ -3,12 +3,25 @@
         grid-template-columns: 1fr 1.5fr;
         gap: 2rem;
         .about {
-            @include flex();
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0 !important;
+            h3 {
+                text-align: left;
+            }
             p {
                 color: $lightgrey;
                 line-height: 2rem;
+                margin-top: 20px;
+            }
+            .tab-nav {
+                li.active {
+                    a {
+                        color: red;
+                    }
+                }
             }
         }
 
@@ -30,18 +43,41 @@
             }
         }
 
-        .contact{
+        .contact {
             margin: 50px 0 20px 0;
-            h4{
+            h4 {
                 font-weight: 100;
                 font-size: 0.9rem;
             }
-            a{
+            a {
                 font-weight: 800;
                 letter-spacing: 2px;
                 transition: 0.2s;
-                &:hover{
+                &:hover {
                     color: $lightgrey;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .main-section{
+        .grid{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media (max-width: 640px){
+    .main-section{
+        .grid{
+            .project{
+                .side-project{
+                    .grid{
+                        grid-template-columns: 1fr;
+                        gap: 0;
+                    }
                 }
             }
         }
