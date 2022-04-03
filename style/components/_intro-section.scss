@@ -1,7 +1,6 @@
 .intro-section {
     @include flex();
     height: 90vh;
-    background-color: #141414;
     .intro {
         @include flex();
         width: 100%;
